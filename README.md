@@ -11,7 +11,14 @@ pip3 install -r requirements.txt
 ```
 
 Then, download the LLM model and place it in a directory of your choice:
-- LLM: default to [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
+- LLM: 
+ For GPT4All:
+ [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
+
+ For LLMAMA:
+[ggml-vic7b-q4_0.bin](https://huggingface.co/vicuna/ggml-vicuna-7b-1.1/resolve/main/ggml-vic7b-q4_0.bin). If you prefer a different LLAMACPP compatible model, just download it and reference it in your `.env` file.
+
+Keep model inside models folder and documents inside documents folder
 
 Rename `example.env` to `.env` and edit the variables appropriately.
 ```

@@ -1,5 +1,5 @@
 # documentsAI
-
+This is a completely private GPT. This always gives answer based on your provided documents. This will not make your private documents public. This does not require an API key or an internet connection.
 
 Built with [privateGPT](https://github.com/imartinez/privateGPT).
 
@@ -15,7 +15,7 @@ Then, download the LLM model and place it in a directory of your choice:
 
 Rename `example.env` to `.env` and edit the variables appropriately.
 ```
-MODEL_TYPE: supports LlamaCpp or GPT4All
+MODEL_TYPE: supports LlamaCpp or GPT4All (You can download model from huggingface)
 PERSIST_DIRECTORY: is the folder you want your vectorstore in
 MODEL_PATH: Path to your GPT4All or LlamaCpp supported LLM
 MODEL_N_CTX: Maximum token limit for the LLM model
@@ -30,7 +30,7 @@ This repo uses a [state of the union transcript](https://github.com/imartinez/pr
 
 ## Instructions for ingesting your own dataset
 
-Put any and all your files into the `source_documents` directory
+Put any and all your files into the `documents` directory
 
 The supported extensions are:
 
@@ -53,19 +53,6 @@ Run the following command to ingest all the data.
 
 ```shell
 python ingest.py
-```
-
-Output should look like this:
-
-```shell
-Creating new vectorstore
-Loading documents from source_documents
-Loading new documents: 100%|██████████████████████| 1/1 [00:01<00:00,  1.73s/it]
-Loaded 1 new documents from source_documents
-Split into 90 chunks of text (max. 500 tokens each)
-Creating embeddings. May take some minutes...
-Using embedded DuckDB with persistence: data will be stored in: db
-Ingestion complete! You can now run privateGPT.py to query your documents
 ```
 
 It will create a `db` folder containing the local vectorstore. Will take 20-30 seconds per document, depending on the size of the document.

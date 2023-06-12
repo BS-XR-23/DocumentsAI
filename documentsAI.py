@@ -33,7 +33,6 @@ def main():
     retriever = db.as_retriever(search_kwargs={"k": target_source_chunks})
     # activate/deactivate the streaming StdOut callback for LLMs
     callbacks = [] if args.mute_stream else [StreamingStdOutCallbackHandler()]
-    print(model_type)
     # Prepare the LLM
     match model_type:
         case "GPT4All":
@@ -46,14 +45,10 @@ def main():
     qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, return_source_documents= not args.hide_source)
     # Interactive questions and answers
     while True:
-        
         query = input("\nEnter a query: ")
         if query == "exit":
             break
         
-
-       
-
         start = timer()
         # Get the answer from the chain
         res = qa(query)

@@ -75,6 +75,16 @@ In order to ask a question, run a command like:
 python documentsAI.py
 ```
 
+You can mention model index also
+1.GPT4ALL
+2.LLAMA
+like:
+
+```shell
+python documentsAI.py --m 1
+```
+
+
 And wait for the script to require your input.
 
 ```plaintext

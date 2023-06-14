@@ -78,7 +78,6 @@ python documentsAI.py
 You can mention model index also:
 - GPT4ALL==1
 - LLAMA==2
-like:
 
 ```shell
 python documentsAI.py --m 1

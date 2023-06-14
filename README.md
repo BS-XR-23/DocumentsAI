@@ -75,9 +75,9 @@ In order to ask a question, run a command like:
 python documentsAI.py
 ```
 
-You can mention model index also
-1.GPT4ALL
-2.LLAMA
+You can mention model index also:
+- GPT4ALL==1
+- LLAMA==2
 like:
 
 ```shell
